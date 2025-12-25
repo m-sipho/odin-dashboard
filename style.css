@@ -1,0 +1,20 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #f0f2f5;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    padding: 1rem 3rem;
+}
+
+.header {
+    display: grid;
+    grid-column: 2 / 6;
+}
+
