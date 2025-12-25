@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+    font-family: "Segoe UI", system-ui, sans-serif;
 }
 
 body {
@@ -10,11 +11,115 @@ body {
 .container {
     display: grid;
     grid-template-columns: 1fr 4fr;
-    padding: 1rem 3rem;
 }
 
 .header {
     display: grid;
-    grid-column: 2 / 6;
+    grid-template-columns: 1fr max-content;
+    align-items: center;
+    gap: 2rem;
+    grid-column: 2 / -1;
+    background-color: white;
+    padding: 1.5rem 3rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, .05);
+}
+
+.header form {
+    display: flex;
+    align-items: center;
+    max-width: 700px;
+    min-width: 200px;
+    width: 100%;
+}
+
+.header form label svg {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+    fill: #666666;
+}
+
+.header form input {
+    background-color: #e4e6eb;
+    border: none;
+    height: 40px;
+    border-radius: 20px;
+    flex: 1;
+    min-width: 30px;
+    font-size: 1rem;
+    outline: none;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, .05);
+    padding: 0 15px;
+}
+
+.header form input:focus {
+    background-color: #d8dadf;
+}
+
+.right {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: clamp(15px, 3.5vw, 40px)
+}
+
+.notification svg {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+}
+
+.profile {
+    border-radius: 50%;
+    background-color: #e4e6eb;
+    fill: #aeafb1;
+}
+
+.profile.one {
+    height: 40px;
+    width: 40px;
+}
+
+.profile.two {
+    height: 70px;
+    width: 70px;
+}
+
+.top-name {
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.greeting {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.greeting-text {
+    font-size: .9rem;
+    font-weight: bold;
+    color: #666;
+}
+
+.username {
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+.btns {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.btns button {
+    padding: 10px 28px;
+    border-radius: 25px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    color: white;
+    background-color: #1992d4;
 }
 
