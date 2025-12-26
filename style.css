@@ -12,6 +12,9 @@ body {
 .container {
     display: grid;
     grid-template-columns: 1fr 4fr;
+    grid-template-rows: auto 1fr;
+    height: 100vh;
+    overflow-y: hidden;
 }
 
 .header {
@@ -20,7 +23,7 @@ body {
     align-items: center;
     gap: 2rem;
     grid-column: 2 / -1;
-    background-color: white;
+    background-color: rgb(255, 255, 255);
     padding: 1.5rem 3rem;
     box-shadow: 0 4px 12px rgba(0, 0, 0, .05);
 }
@@ -133,6 +136,8 @@ body {
     background-color: #1992d4;
     color: white;
     padding: .2rem;
+    top: 0;
+    overflow-y: auto;
 }
 
 .logo {
@@ -187,8 +192,136 @@ body {
 .links a:hover {
     color: white;
     background-color: rgba(225, 255, 255, .1);
+    transform: translateX(3px);
 }
 
 .links a:hover svg {
     fill: white;
+}
+
+.main-content {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-column: 2 / -1;
+    padding: 30px 25px;
+    gap: 30px;
+    overflow-y: auto;
+}
+
+.title {
+    font-size: 1.25rem;
+    margin-bottom: .5rem;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 25px;
+}
+
+.card {
+    background: white;
+    border-radius: 16px;
+    padding: 2rem;
+    border-left: 8px solid #fbbf24;
+    display: flex;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    flex-direction: column;
+    gap: 15px;
+    transition: all .3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+.card-icons svg {
+    width: 22px;
+    height: 22px;
+    fill: #94a3b8;
+    cursor: pointer;
+    transition: fill .2s;
+}
+
+.card-icons svg:hover {
+    fill: black;
+}
+
+.card-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+.card-content {
+    font-size: .9rem;
+    flex: 1;
+}
+
+.card-icons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.right-sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.info-card {
+    background: white;
+    border-radius: 16px;
+    padding: 1.5rem;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.announcement-item {
+    padding: 15px 0;
+    border-bottom: 1px solid #dee1e3;
+}
+
+.announcement-item:last-child {
+    border-bottom: none;
+}
+
+.announcement-title {
+    font-size: .9rem;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.announcement-description {
+    font-size: .8rem;
+    color: #6b7480;
+}
+
+.trending-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 18px;
+}
+
+.trending-avatar {
+    height: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.trending-item svg {
+    background-color: #e4e6eb;
+    fill: #aeafb1;
+}
+
+.trending-info .handle{
+    font-size: .9rem;
+    font-weight: 500;
+}
+
+.trending-info .project {
+    font-size: .8rem;
+    color: #6b788a;
 }
