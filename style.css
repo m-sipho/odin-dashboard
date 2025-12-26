@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
     font-family: "Segoe UI", system-ui, sans-serif;
 }
 
@@ -123,3 +124,71 @@ body {
     background-color: #1992d4;
 }
 
+.sidebar {
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    grid-column: 1 / 2;
+    grid-row: 1 / -1;
+    height: 100vh;
+    background-color: #1992d4;
+    color: white;
+    padding: .2rem;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 3rem;
+    margin-bottom: 1.5rem;
+}
+
+.logo svg {
+    height: 40px;
+    width: 40px;
+    fill: white;
+}
+
+.links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    list-style-type: none;
+    margin-bottom: 60px;
+}
+
+.links a svg {
+    width: 24px;
+    height: 24px;
+    fill: #d2d2d2;
+    transition: fill .3s ease;
+}
+
+.links li {
+    margin-bottom: 5px;
+}
+
+.links a {
+    text-decoration: none;
+    color: #d2d2d2;
+    font-weight: 500;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 12px 15px;
+    margin-right: 45px; 
+    border-radius: 12px;
+    transition: all .3s ease;
+}
+
+.links a:hover {
+    color: white;
+    background-color: rgba(225, 255, 255, .1);
+}
+
+.links a:hover svg {
+    fill: white;
+}
